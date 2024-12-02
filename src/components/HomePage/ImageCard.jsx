@@ -6,7 +6,7 @@ const ImageCard = () => {
     { image: "/Image4.png", title: "Things to do" },
   ];
   return (
-    <section className="container mx-auto w-[80%]">
+    <section className="lg:container mx-auto w-[80%]">
       <div className="mt-12">
         <h2 className="font-RedHotDisplay font-bold text-3xl lg:text-[42px] leading-10 lg:leading-[54px] -tracking-[2%] text-center mt-10 mb-5 text-[#26395C]">
           What are you in the mood for?
