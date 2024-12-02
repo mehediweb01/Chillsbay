@@ -22,7 +22,7 @@ const NavbarArea = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <section>
-      <Navbar onMenuOpenChange={setIsOpen} className="w-full">
+      <Navbar onMenuOpenChange={setIsOpen} maxWidth="xl">
         {/* desktop device */}
         <NavbarContent className="hidden sm:flex">
           <NavbarContent>
