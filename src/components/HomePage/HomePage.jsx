@@ -3,6 +3,7 @@ import ImageCard from "./ImageCard";
 import ThingsTodo from "./ThingsTodo";
 import ChillsBayArea from "./ChillsBay";
 import Carousel from "./Carousel";
+import Gallery from "./Gallery";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <ThingsTodo />
       <ChillsBayArea />
       <Carousel />
+      <Gallery />
     </div>
   );
 };
