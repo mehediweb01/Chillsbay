@@ -1,7 +1,8 @@
 import Hero from "./Hero";
 import ImageCard from "./ImageCard";
 import ThingsTodo from "./ThingsTodo";
-import ChillsBayArea from './ChillsBay';
+import ChillsBayArea from "./ChillsBay";
+import Carousel from "./Carousel";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
       <ImageCard />
       <ThingsTodo />
       <ChillsBayArea />
+      <Carousel />
     </div>
   );
 };
