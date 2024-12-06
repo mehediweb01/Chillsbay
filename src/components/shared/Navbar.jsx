@@ -16,10 +16,12 @@ import {
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { LuUser2 } from "react-icons/lu";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import SignUpForm from "../HomePage/SignUpForm";
+import UserLogin from "../HomePage/UserLogin";
 const NavbarArea = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const value = true;
   return (
     <section>
       <Navbar onMenuOpenChange={setIsOpen} maxWidth="xl">
@@ -70,22 +72,7 @@ const NavbarArea = () => {
               </Badge>
             </NavbarItem>
             <NavbarItem>
-              <Dropdown>
-                <DropdownTrigger>
-                  <Button
-                    variant="none"
-                    size="sm"
-                    className="text-black font-[500] text-[18px] leading-5"
-                  >
-                    <LuUser2 /> Account
-                  </Button>
-                </DropdownTrigger>
-                <DropdownMenu>
-                  <DropdownItem>My Profile</DropdownItem>
-                  <DropdownItem>My History</DropdownItem>
-                  <DropdownItem>Sign out</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
+              {value === true ? <SignUpForm /> : <UserLogin />}
             </NavbarItem>
             <NavbarItem>
               <Button variant="solid" color="primary" size="md">
@@ -150,24 +137,6 @@ const NavbarArea = () => {
             </Dropdown>
           </NavbarMenuItem>
           <NavbarMenuItem>
-            <Dropdown>
-              <DropdownTrigger>
-                <Button
-                  variant="none"
-                  size="sm"
-                  className="text-black font-[500] text-[18px] leading-5 -left-3"
-                >
-                  <LuUser2 /> Account
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu>
-                <DropdownItem>My Profile</DropdownItem>
-                <DropdownItem>My History</DropdownItem>
-                <DropdownItem>Sign out</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </NavbarMenuItem>
-          <NavbarMenuItem>
             <Button variant="solid" color="primary" size="md" type="button">
               <NavLink
                 to="/contact"
@@ -179,6 +148,10 @@ const NavbarArea = () => {
           </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
+      {/* login form */}
+      <div className="sm:hidden flex items-center justify-center w-[90%] mx-auto my-3 bg-blue-400 rounded-full">
+        {value === true ? <SignUpForm /> : <UserLogin />}
+      </div>
     </section>
   );
 };

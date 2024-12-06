@@ -1,8 +1,8 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-.active{
-  @apply text-green-600 tracking-[2px] font-bold 
+.active {
+  @apply text-green-600 tracking-[2px] font-bold;
 }
