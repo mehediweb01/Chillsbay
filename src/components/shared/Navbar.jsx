@@ -36,7 +36,7 @@ const NavbarArea = () => {
           </NavbarContent>
           <NavbarContent>
             <NavbarItem>
-              <NavLink to="/Eat" className="font-[500] text-[18px] leading-5">
+              <NavLink to="/drink" className="font-[500] text-[18px] leading-5">
                 Eat & Drink
               </NavLink>
             </NavbarItem>

@@ -4,5 +4,5 @@
   box-sizing: border-box;
 }
 .active {
-  @apply text-green-600 tracking-[2px] font-bold;
+  @apply text-gray-400 tracking-[2.5px] font-bold;
 }
