@@ -1,3 +1,4 @@
+import FindPlace from "./Drink-FindPlace";
 import HeroArea from "./DrinkHeroArea";
 
 const DrinkPage = () => {
@@ -5,6 +6,7 @@ const DrinkPage = () => {
     <>
       <div>
         <HeroArea />
+        <FindPlace />
       </div>
     </>
   );
