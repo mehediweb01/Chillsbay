@@ -11,7 +11,7 @@ const ThingsTodo = () => {
   ];
   return (
     <section className="bg-[#F5FAFF] mt-12">
-      <div className="lg:container w-[80%] mx-auto">
+      <div className="w-[80%] mx-auto">
         <h2 className="font-RedHotDisplay font-bold text-[#26395C] text-3xl leading-10 lg:leading-[54px] text-center sm:text-start">
           Top things to do in Lagos
         </h2>

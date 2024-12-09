@@ -51,7 +51,7 @@ const Footer = () => {
     titles,
   } = FooterDetails;
   return (
-    <footer className="container lg:w-full w-[80%] mx-auto my-20">
+    <footer className="w-[90%] mx-auto my-20">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* left side */}
         <div className="col-span-1">

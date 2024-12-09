@@ -18,7 +18,7 @@ const cardsInfo = [
 const ChillsBayArea = () => {
   return (
     <section className="mt-12 mb-6">
-      <div className="lg:container w-[80%] mx-auto">
+      <div className="w-[80%] mx-auto">
         <h1 className="font-bold text-3xl lg:text-[42px] font-RedHotDisplay leading-7 lg:leading-10 text-[#26395C] text-center mb-3">
           Why Use Chillsbay?
         </h1>

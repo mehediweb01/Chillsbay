@@ -9,7 +9,7 @@ const Gallery = () => {
   ];
   return (
     <section className="lg:mt-12 mt-8 p-4 border border-slate-200">
-      <div className="container lg:w-full w-[80%] mx-auto">
+      <div className="w-[80%] mx-auto">
         <h2 className="text-[#26395C] font-bold font-RedHotDisplay lg:text-2xl text-xl leading-5 lg:leading-8 -tracking-[2%] md:text-start text-center">
           See How people are chilling on
           <span className="text-blue-500"> Chillsbay</span>

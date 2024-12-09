@@ -2,7 +2,7 @@ import { Autocomplete, AutocompleteItem, Button } from "@nextui-org/react";
 const Hero = () => {
   return (
     <section className="bg-[url('./hero.png')] w-full py-14 bg-no-repeat bg-cover bg-center mt-4 overflow-hidden mx-auto">
-      <div className="mt-10 container mx-auto">
+      <div className="mt-10 w-[80%] mx-auto">
         <h1 className="text-white font-bold text-3xl lg:text-[62px] leading-10 lg:leading-[74px] lg:w-[60%] w-full text-center lg:text-start  font-RedHotDisplay">
           Find amazing things to do anytime, anywhere in Lagos.
         </h1>

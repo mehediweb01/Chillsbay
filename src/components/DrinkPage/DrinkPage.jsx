@@ -11,6 +11,7 @@ const DrinkPage = () => {
         <FindPlace />
         <RestaurantsCard title="Popular restuarants in Lagos" />
         <Carousel />
+        <RestaurantsCard title="Resturants nearby" />
       </div>
     </>
   );
