@@ -13,11 +13,12 @@ let formattedDate = new Intl.DateTimeFormat("en-US", {
 const Carousels = [
   {
     id: 1,
-    title: "Upcoming events this weekend",
-    image: "/carouselImage.png",
+    title: "Upcoming Eat & Drink Events",
+    image: "/drink-carousel.png",
     details: [
       {
-        detailsTitle: "Wizkid made in lagos tour",
+        detailsTitle:
+          "GTCO Food and Drink Festival 2022: Africa’s Biggest Food and Drink Festival",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
 
@@ -40,7 +41,7 @@ const Carousels = [
   {
     id: 2,
     title: " second Title now",
-    image: "/carouselImage.png",
+    image: "/drink-carousel.png",
     details: [
       {
         detailsTitle: "Learning now front end web development",
@@ -66,7 +67,7 @@ const Carousels = [
   {
     id: 3,
     title: " third Title now",
-    image: "/carouselImage.png",
+    image: "/drink-carousel.png",
     details: [
       {
         detailsTitle: "Learning now full stack web development",
@@ -113,11 +114,8 @@ const Carousel = () => {
   };
 
   return (
-    <section className="lg:mt-20 mt-16 mb-6">
-      <div className="w-[80%] mx-auto">
-        <h2 className="font-bold text-[#26395C] font-RedHotDisplay text-3xl lg:text-[42px] lg:leading-10 md:text-start text-center">
-          See How People are Chilling On Chillsbay
-        </h2>
+    <section className="w-[85%] mx-auto lg:mt-20 mt-16 mb-6">
+      <div className="container lg:w-full w-[80%] mx-auto">
         <div className=" flex justify-between items-center">
           <div className=" absolute left-0 transform ">
             <button onClick={handlePrev} className="w-[45px] h-[45px]">
@@ -130,11 +128,7 @@ const Carousel = () => {
               <h2 className="md:text-3xl text-xl lg:text-start text-center leading-6 md:leading-9 font-RedHotDisplay font-bold text-[#26395C] max-w-2xl mb-3">
                 {sliders.title}
               </h2>
-              <img
-                src={sliders.image}
-                alt=""
-                className="w-full md:h-auto h-[250px]"
-              />
+              <img src={sliders.image} alt="" className="w-full md:h-auto h-[250px]" />
             </div>
             {/* right side */}
             <div className="lg:mt-11 -mt-10 w-full mx-auto">
