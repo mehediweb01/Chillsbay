@@ -106,7 +106,7 @@ const NavbarArea = () => {
         {/* menu list */}
         <NavbarMenu className="bg-[#FBFCFF]">
           <NavbarMenuItem>
-            <NavLink to="/Eat" className="font-[500] text-[18px] leading-5">
+            <NavLink to="/drink" className="font-[500] text-[18px] leading-5">
               Eat & Drink
             </NavLink>
           </NavbarMenuItem>

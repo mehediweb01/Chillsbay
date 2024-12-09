@@ -12,6 +12,7 @@ export default {
     extend: {
       fontFamily: {
         RedHotDisplay: '"Red Hat Display", "sans-serif"',
+        PlusJakartaSans: ' "Plus Jakarta Sans", sans-serif',
       },
     },
   },

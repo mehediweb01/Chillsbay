@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Slow Lagos",
+    "image": "./card1.png",
+    "description": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tags": "African • Italian • Asian • Continental",
+    "btnText": "Reserve Now"
+  },
+
+  {
+    "id": 2,
+    "title": "Nok by Alara",
+    "image": "./card2.png",
+    "description": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tags": "African • Italian • Asian • Continental",
+    "btnText": "Reserve Now"
+  },
+
+  {
+    "id": 3,
+    "title": "Noir",
+    "image": "./card3.png",
+    "description": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tags": "African • Italian • Asian • Continental",
+    "btnText": "Reserve Now"
+  },
+
+  {
+    "id": 4,
+    "title": "Soho",
+    "image": "./card4.png",
+    "description": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tags": "African • Italian • Asian • Continental",
+    "btnText": "Reserve Now"
+  }
+]
