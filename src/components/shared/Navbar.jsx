@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Navbar,
   NavbarBrand,
@@ -19,7 +20,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import SignUpForm from "../HomePage/SignUpForm";
 import UserLogin from "../HomePage/UserLogin";
-const NavbarArea = () => {
+const NavbarArea = ({ cartItem }) => {
   const [isOpen, setIsOpen] = useState(false);
   const value = true;
   return (
@@ -67,9 +68,17 @@ const NavbarArea = () => {
               </Dropdown>
             </NavbarItem>
             <NavbarItem>
-              <Badge content="3" placement="top-left" color="primary">
-                <MdOutlineShoppingCart className="size-6" />
-              </Badge>
+              <NavLink to="/payment">
+                <Badge
+                  content={cartItem
+                    .reduce((total, item) => total + item.quantity, 0)
+                    .toLocaleString()}
+                  placement="top-left"
+                  color="primary"
+                >
+                  <MdOutlineShoppingCart className="size-6" />
+                </Badge>
+              </NavLink>
             </NavbarItem>
             <NavbarItem>
               {value === true ? <SignUpForm /> : <UserLogin />}
