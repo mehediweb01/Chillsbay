@@ -1,56 +1,74 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import NavbarArea from "./components/shared/Navbar";
+// import NavbarArea from "./components/shared/Navbar";
 import HomePage from "./components/HomePage/HomePage";
-import Footer from "./components/shared/Footer";
+// import Footer from "./components/shared/Footer";
 import PageNotFount from "./components/PageNotFount";
 import DrinkPage from "./components/DrinkPage/DrinkPage";
 import ClubPage from "./components/Club/ClubPage";
 import PaymentPage from "./components/payment/PaymentPage";
 import { useState } from "react";
 import ContactPage from "./components/contact/ContactPage";
+import Warper from "./components/common/Warper";
+import { data } from "./components/db";
 
 function App() {
-  const [cartItem, setCartItem] = useState([
-    {
-      id: 1,
-      image: "/productImage1.png",
-      title: "The 90s with Dj Neptune",
-      price: 4500000,
-      quantity: 1,
-      date: "Dec 12 2024",
-      location: "Quilox Club",
-      time: "9:00 PM ",
-    },
-    {
-      id: 2,
-      image: "/productImage2.png",
-      title: "Water Sports at Ikoyi Bay ",
-      price: 9000000,
-      quantity: 1,
-      date: "Dec 12 2024",
-      location: "Quilox Club",
-      time: "10:00 PM ",
-    },
-  ]);
+  const [cartItem, setCartItem] = useState([...data]);
   return (
     <>
       <BrowserRouter>
-        <NavbarArea cartItem={cartItem} />
+        {/* <NavbarArea cartItem={cartItem} /> */}
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/drink" element={<DrinkPage />} />
-          <Route path="/club" element={<ClubPage />} />
+          <Route
+            path="/"
+            element={
+              <Warper>
+                <HomePage />
+              </Warper>
+            }
+          />
+          <Route
+            path="/drink"
+            element={
+              <Warper>
+                <DrinkPage />
+              </Warper>
+            }
+          />
+          <Route
+            path="/club"
+            element={
+              <Warper isDark>
+                <ClubPage />
+              </Warper>
+            }
+          />
           <Route
             path="/payment"
             element={
-              <PaymentPage cartItem={cartItem} setCartItem={setCartItem} />
+              <Warper>
+                <PaymentPage cartItem={cartItem} setCartItem={setCartItem} />
+              </Warper>
             }
           />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<PageNotFount />} />
+          <Route
+            path="/contact"
+            element={
+              <Warper>
+                <ContactPage />
+              </Warper>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Warper>
+                <PageNotFount />
+              </Warper>
+            }
+          />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

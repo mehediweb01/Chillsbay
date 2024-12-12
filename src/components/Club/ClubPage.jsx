@@ -1,10 +1,10 @@
 const ClubPage = () => {
   return (
-    <div>
-      <h1 className="text-center font-RedHotDisplay font-bold text-4xl bg-sky-400 text-white">
+    <section>
+      <h1 className="text-center font-RedHotDisplay font-bold text-4xl p-4">
         club page
       </h1>
-    </div>
+    </section>
   );
 };
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Dropdown,
   DropdownTrigger,
@@ -7,7 +8,7 @@ import {
 } from "@nextui-org/react";
 import { LuUser2 } from "react-icons/lu";
 
-const UserLogin = () => {
+const UserLogin = ({ isDark }) => {
   return (
     <div>
       <Dropdown>
@@ -15,7 +16,11 @@ const UserLogin = () => {
           <Button
             variant="none"
             size="sm"
-            className="text-black font-[500] text-[18px] leading-5"
+            className={
+              isDark
+                ? "text-white font-[500] text-[18px] leading-5"
+                : "text-black font-[500] text-[18px] leading-5"
+            }
           >
             <LuUser2 /> Account
           </Button>

@@ -14,18 +14,24 @@ import {
   Button,
   Badge,
 } from "@nextui-org/react";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import SignUpForm from "../HomePage/SignUpForm";
 import UserLogin from "../HomePage/UserLogin";
-const NavbarArea = ({ cartItem }) => {
+import { useState } from "react";
+import { themeColor } from "../../lib/utils";
+
+const NavbarArea = ({ isDark }) => {
   const [isOpen, setIsOpen] = useState(false);
   const value = true;
   return (
     <section>
-      <Navbar onMenuOpenChange={setIsOpen} maxWidth="xl">
+      <Navbar
+        onMenuOpenChange={setIsOpen}
+        maxWidth="xl"
+        className={themeColor(isDark)}
+      >
         {/* desktop device */}
         <NavbarContent className="hidden sm:flex">
           <NavbarContent>
@@ -50,12 +56,20 @@ const NavbarArea = ({ cartItem }) => {
               </NavLink>
             </NavbarItem>
             <NavbarItem>
-              <Dropdown>
+              <Dropdown
+                className={
+                  isDark ? "bg-slate-800 text-white" : "bg-white text-black"
+                }
+              >
                 <DropdownTrigger>
                   <Button
                     variant="none"
                     size="sm"
-                    className="text-black font-[500] text-[18px] leading-5"
+                    className={
+                      isDark
+                        ? "text-white font-[500] text-[18px] leading-5"
+                        : "text-black font-[500] text-[18px] leading-5"
+                    }
                   >
                     Things to do <RiArrowDropDownLine className="size-6" />
                   </Button>
@@ -69,19 +83,17 @@ const NavbarArea = ({ cartItem }) => {
             </NavbarItem>
             <NavbarItem>
               <NavLink to="/payment">
-                <Badge
-                  content={cartItem
-                    .reduce((total, item) => total + item.quantity, 0)
-                    .toLocaleString()}
-                  placement="top-left"
-                  color="primary"
-                >
+                <Badge content="3" placement="top-left" color="primary">
                   <MdOutlineShoppingCart className="size-6" />
                 </Badge>
               </NavLink>
             </NavbarItem>
             <NavbarItem>
-              {value === true ? <SignUpForm /> : <UserLogin />}
+              {value === true ? (
+                <SignUpForm isDark={isDark} />
+              ) : (
+                <UserLogin isDark={isDark} />
+              )}
             </NavbarItem>
             <NavbarItem>
               <Button variant="solid" color="primary" size="md">

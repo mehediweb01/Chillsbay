@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Button,
   Input,
@@ -10,7 +11,7 @@ import google from "/google.png";
 import facebook from "/facebook.png";
 import apple from "/apple.png";
 import { useState } from "react";
-const SignUpForm = () => {
+const SignUpForm = ({ isDark }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(true);
@@ -24,7 +25,11 @@ const SignUpForm = () => {
       <Button
         variant="none"
         size="sm"
-        className="text-black font-[500] text-[18px] leading-5"
+        className={
+          isDark
+            ? "text-white font-[500] text-[18px] leading-5"
+            : "text-black font-[500] text-[18px] leading-5"
+        }
         onPress={handleOpen}
       >
         <LuUser2 /> Account
