@@ -8,6 +8,7 @@ import DrinkPage from "./components/DrinkPage/DrinkPage";
 import ClubPage from "./components/Club/ClubPage";
 import PaymentPage from "./components/payment/PaymentPage";
 import { useState } from "react";
+import ContactPage from "./components/contact/ContactPage";
 
 function App() {
   const [cartItem, setCartItem] = useState([
@@ -46,6 +47,7 @@ function App() {
               <PaymentPage cartItem={cartItem} setCartItem={setCartItem} />
             }
           />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<PageNotFount />} />
         </Routes>
         <Footer />

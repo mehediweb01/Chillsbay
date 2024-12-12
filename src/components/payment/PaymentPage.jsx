@@ -5,30 +5,8 @@ import { RiCheckboxCircleFill } from "react-icons/ri";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Button } from "@nextui-org/react";
 
-const PaymentPage = ({cartItem, setCartItem}) => {
+const PaymentPage = ({ cartItem, setCartItem }) => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [cartItem, setCartItem] = useState([
-  //   {
-  //     id: 1,
-  //     image: "/productImage1.png",
-  //     title: "The 90s with Dj Neptune",
-  //     price: 4500000,
-  //     quantity: 1,
-  //     date: "Dec 12 2024",
-  //     location: "Quilox Club",
-  //     time: "9:00 PM ",
-  //   },
-  //   {
-  //     id: 2,
-  //     image: "/productImage2.png",
-  //     title: "Water Sports at Ikoyi Bay ",
-  //     price: 9000000,
-  //     quantity: 1,
-  //     date: "Dec 12 2024",
-  //     location: "Quilox Club",
-  //     time: "10:00 PM ",
-  //   },
-  // ]);
   // update quantity
   const updateQuantity = (id, increment) => {
     setCartItem((items) =>
