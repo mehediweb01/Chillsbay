@@ -6,3 +6,9 @@
 .active {
   @apply text-gray-400 tracking-[1px] font-bold;
 }
+span.text-foreground.text-large {
+  @apply font-bold font-RedHotDisplay text-[#26395C] text-[22px] leading-7 tracking-[1%];
+}
+div#\:r2n\: {
+  @apply text-[#656B89] font-RedHotDisplay text-base leading-7 tracking-[1%];
+}

@@ -1,5 +1,26 @@
 import { Button, Input, Select, SelectItem, Textarea } from "@nextui-org/react";
+import FAQs from "./FAQs";
 
+const items = [
+  {
+    image: "/influencer.png",
+    title: "Become an Influencer",
+    des: "Join a company that’s passionate about design and technology",
+    linkLabel: "chills@chillsbay.com",
+  },
+  {
+    image: "/help.png",
+    title: "Need Help?",
+    des: "Questions about using  Market? Our support team is here to help.",
+    linkLabel: "chills@chillsbay.com",
+  },
+  {
+    image: "/refunds.png",
+    title: "Refunds & Others",
+    des: "Find press releases and media coverage about Chillsbay",
+    linkLabel: "chills@chillsbay.com",
+  },
+];
 const ContactPage = () => {
   return (
     <section className="w-[80%] mx-auto my-12 md:my-20 lg:my-24">
@@ -89,7 +110,32 @@ const ContactPage = () => {
           </form>
         </div>
       </div>
-      
+      {/* card */}
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center my-12 md:my-24 gap-4">
+        {items.map((info, index) => (
+          <div
+            key={index}
+            className="flex flex-col justify-center items-center gap-4"
+          >
+            <img src={info.image} alt="" />
+            <div>
+              <h2 className="text-center font-RedHotDisplay font-bold text-[22px] leading-7 -tracking-[1%] text-[#26395C]">
+                {info.title}
+              </h2>
+              <p className="md:w-[70%] w-full mx-auto text-[#656B89] text-base leading-7 tracking-[1%]">
+                {info.des}
+              </p>
+            </div>
+            <p className="text-[#0E8BFF] text-center text-base leading-7 -tracking-[1%]">
+              {info.linkLabel}
+            </p>
+          </div>
+        ))}
+      </div>
+      {/* faqs */}
+      <div className="mt-12">
+        <FAQs />
+      </div>
     </section>
   );
 };
