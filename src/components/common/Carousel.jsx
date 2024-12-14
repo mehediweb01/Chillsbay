@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
-import ChevronLeft from "/ChevronLeft.png";
-import ChevronRight from "/ChevronRight.png";
-import { Button } from "@nextui-org/react";
+import { Button, cn } from "@nextui-org/react";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 // date format
 let myDate = new Date();
 let formattedDate = new Intl.DateTimeFormat("en-US", {
@@ -91,7 +92,7 @@ const Carousels = [
   },
 ];
 
-const Carousel = () => {
+const Carousel = ({ isDark }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliders = Carousels[currentIndex];
   const { details } = sliders;
@@ -118,31 +119,55 @@ const Carousel = () => {
       <div className="container lg:w-full w-[80%] mx-auto">
         <div className=" flex justify-between items-center">
           <div className=" absolute left-0 transform ">
-            <button onClick={handlePrev} className="w-[45px] h-[45px]">
-              <img src={ChevronLeft} alt="" />
+            <button onClick={handlePrev}>
+              <IoIosArrowBack className="w-10 h-10" />
             </button>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 gap-6 mt-12">
             {/* left side */}
             <div>
-              <h2 className="md:text-3xl text-xl lg:text-start text-center leading-6 md:leading-9 font-RedHotDisplay font-bold text-[#26395C] max-w-2xl mb-3">
-                {sliders.title}
-              </h2>
-              <img src={sliders.image} alt="" className="w-full md:h-auto h-[250px]" />
+              <div
+                className={cn(
+                  "md:text-3xl text-xl lg:text-start text-center leading-6 md:leading-9 font-RedHotDisplay font-bold text-[#26395C] max-w-2xl mb-3",
+                  isDark && "text-white"
+                )}
+              >
+                {isDark ? "Tonight In Lagos" : <h2>{sliders.title}</h2>}
+              </div>
+              <img
+                src={isDark ? "/clubSlider.png" : sliders.image}
+                alt=""
+                className="w-full md:h-auto h-[250px]"
+              />
             </div>
             {/* right side */}
             <div className="lg:mt-11 -mt-10 w-full mx-auto">
-              <h2 className="lg:max-w-sm max-w-full text-base sm:text-2xl mg:text-[40px] -tracking-[2%] leading-6 sm:leading-10 md:leading-[54px] text-[#26395C] text-center sm:text-start font-bold mb-6 lg:mt-0 mt-5">
-                {detailsTitle}
+              <h2
+                className={cn(
+                  "lg:max-w-sm max-w-full text-base sm:text-2xl mg:text-[40px] -tracking-[2%] leading-6 sm:leading-10 md:leading-[54px] text-[#26395C] text-center sm:text-start font-bold mb-6 lg:mt-0 mt-5",
+                  isDark && "text-white"
+                )}
+              >
+                {isDark ? "The 90s with Dj Neptune" : detailsTitle}
               </h2>
-              <p className="lg:max-w-md sm:text-start text-center lg:text-xl text-base lg:leading-7 font-RedHotDisplay text-[#26395C]">
+              <p
+                className={cn(
+                  "lg:max-w-md sm:text-start text-center lg:text-xl text-base lg:leading-7 font-RedHotDisplay text-[#26395C]",
+                  isDark && "text-white"
+                )}
+              >
                 {description}
               </p>
               <div className="grid grid-cols-2 gap-y-5 gap-x-1 mt-8">
                 {sections.map((section, index) => (
                   <div key={index} className="flex items-center space-x-2">
                     <img src={section.image} alt="" />
-                    <p className="font-RedHotDisplay text-sm md:text-xl text-[#26395C] leading-4 tracking-[5%]">
+                    <p
+                      className={cn(
+                        "font-RedHotDisplay text-sm md:text-xl text-[#26395C] leading-4 tracking-[5%]",
+                        isDark && "text-white"
+                      )}
+                    >
                       {section.title}
                     </p>
                   </div>
@@ -152,10 +177,15 @@ const Carousel = () => {
                 {btn.map(({ label }, index) => (
                   <div key={index} className="mt-8">
                     <Button
-                      variant={`${
-                        label === "Add to cart" ? "bordered" : "solid"
-                      }`}
+                      variant={label === "Add to cart" ? "bordered" : "solid"}
                       color="primary"
+                      className={
+                        isDark
+                          ? label === "Add to cart"
+                            ? "bg-white"
+                            : "bg-[#0E8BFF]"
+                          : ""
+                      }
                     >
                       {label}
                     </Button>
@@ -177,8 +207,8 @@ const Carousel = () => {
             </div>
           </div>
           <div className=" absolute right-0 transform ">
-            <button onClick={handleNext} className="w-[45px] h-[45px]">
-              <img src={ChevronRight} alt="" />
+            <button onClick={handleNext}>
+              <IoIosArrowForward className="w-10 h-10" />
             </button>
           </div>
         </div>
@@ -189,9 +219,16 @@ const Carousel = () => {
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}
-                className={`w-3 h-3 rounded-full ${
-                  currentIndex === index ? "bg-black" : "bg-gray-400"
-                }`}
+                className={cn(
+                  "w-3 h-3 rounded-full",
+                  isDark
+                    ? currentIndex === index
+                      ? "bg-blue-500"
+                      : "bg-gray-500"
+                    : currentIndex === index
+                    ? "bg-black"
+                    : "bg-gray-400"
+                )}
               ></button>
             ))}
           </div>

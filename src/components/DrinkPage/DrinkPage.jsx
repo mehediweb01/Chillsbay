@@ -1,7 +1,7 @@
 import FindPlace from "./Drink-FindPlace";
 import RestaurantsCard from "../common/RestaurantsCard";
 import HeroArea from "./DrinkHeroArea";
-import Carousel from "./Drink-Carousel";
+import Carousel from "../common/Carousel";
 import Map from "./Drink-Map";
 
 const DrinkPage = () => {

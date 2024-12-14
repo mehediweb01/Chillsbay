@@ -15,7 +15,10 @@ const RestaurantsCard = ({ title, api, isDark }) => {
   });
   return (
     <section
-      className={cn("w-[85%] mx-auto bg-[#F5FAFF] my-6", isDark && "bg-black")}
+      className={cn(
+        "w-[85%] mx-auto bg-[#F5FAFF] my-6",
+        isDark && "bg-black my-16"
+      )}
     >
       <div>
         <div className="flex justify-between items-center">
