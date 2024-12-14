@@ -1,5 +1,5 @@
 import FindPlace from "./Drink-FindPlace";
-import RestaurantsCard from "../common/Drink-RestaurantsCard";
+import RestaurantsCard from "../common/RestaurantsCard";
 import HeroArea from "./DrinkHeroArea";
 import Carousel from "./Drink-Carousel";
 import Map from "./Drink-Map";
@@ -10,9 +10,12 @@ const DrinkPage = () => {
       <div>
         <HeroArea />
         <FindPlace />
-        <RestaurantsCard title="Popular restuarants in Lagos" />
+        <RestaurantsCard
+          api="/data.json"
+          title="Popular restuarants in Lagos"
+        />
         <Carousel />
-        <RestaurantsCard title="Resturants nearby" />
+        <RestaurantsCard title="Resturants nearby" api={"/data.json"} />
         <Map />
       </div>
     </>

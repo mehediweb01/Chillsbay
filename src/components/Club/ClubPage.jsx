@@ -1,10 +1,16 @@
+import RestaurantsCard from "../common/RestaurantsCard";
 import Hero from "./Hero";
 
 const ClubPage = () => {
   return (
-    <section>
+    <>
       <Hero />
-    </section>
+      <RestaurantsCard
+        isDark
+        api={"/clubData.json"}
+        title={"Popular Night Clubs"}
+      />
+    </>
   );
 };
 

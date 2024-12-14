@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Quilox ",
+    "image": "./club1.png",
+    "date": "14 dec 2024",
+    "description": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tagImage1": "/white-calendar.png",
+    "tagImage2": "/white-clock.png",
+    "calendar": "Mondays-Friday",
+    "clock": "8pm-3am",
+    "btnText": "Book Now"
+  },
+  {
+    "id": 2,
+    "title": "Silver fox ",
+    "image": "./club2.png",
+    "date": "14 dec 2024",
+    "description": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tagImage1": "/white-calendar.png",
+    "tagImage2": "/white-clock.png",
+    "calendar": "Mondays-Friday",
+    "clock": "8pm-3am",
+    "btnText": "Book Now"
+  },
+  {
+    "id": 3,
+    "title": "Nitro night club ",
+    "image": "./club3.png",
+    "date": "14 dec 2024",
+    "description": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tagImage1": "/white-calendar.png",
+    "tagImage2": "/white-clock.png",
+    "calendar": "Mondays-Friday",
+    "clock": "8pm-3am",
+    "btnText": "Book Now"
+  },
+  {
+    "id": 4,
+    "title": "Club vegas ",
+    "image": "./club4.png",
+    "date": "14 dec 2024",
+    "description": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tagImage1": "/white-calendar.png",
+    "tagImage2": "/white-clock.png",
+    "calendar": "Mondays-Friday",
+    "clock": "8pm-3am",
+    "btnText": "Book Now"
+  }
+]
