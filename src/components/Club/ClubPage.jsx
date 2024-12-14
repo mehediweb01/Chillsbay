@@ -1,4 +1,5 @@
 import Carousel from "../common/Carousel";
+import MyMap from "../common/Map";
 import RestaurantsCard from "../common/RestaurantsCard";
 import Hero from "./Hero";
 
@@ -17,6 +18,7 @@ const ClubPage = () => {
         api={"/clubData.json"}
         title="Bars and Night clubs near you"
       />
+      <MyMap isDark />
     </>
   );
 };

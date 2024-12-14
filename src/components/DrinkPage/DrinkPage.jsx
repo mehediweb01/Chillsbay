@@ -2,7 +2,7 @@ import FindPlace from "./Drink-FindPlace";
 import RestaurantsCard from "../common/RestaurantsCard";
 import HeroArea from "./DrinkHeroArea";
 import Carousel from "../common/Carousel";
-import Map from "./Drink-Map";
+import MyMap from "../common/Map";
 
 const DrinkPage = () => {
   return (
@@ -16,7 +16,7 @@ const DrinkPage = () => {
         />
         <Carousel />
         <RestaurantsCard title="Resturants nearby" api={"/data.json"} />
-        <Map />
+        <MyMap />
       </div>
     </>
   );
